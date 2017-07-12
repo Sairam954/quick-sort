@@ -18,17 +18,16 @@ else if(input.length === 1)
 	return input;
 }
 
-else{
-var sortedArr=quickSort(input,0,input.length);
+else {
+var sortedArr=quickSort(input,0,input.length-1);
 
 function quickSort(items, left, right) {
 
     var index;
 
-    if (items.length > 1) {
+    var index;
 
-        left = typeof left != "number" ? 0 : left;
-        right = typeof right != "number" ? items.length - 1 : right;
+    if (items.length > 1) {
 
         index = partition(items, left, right);
 
@@ -43,6 +42,8 @@ function quickSort(items, left, right) {
     }
 
     return items;
+
+   
 }
 function swap(items, firstIndex, secondIndex){
     var temp = items[firstIndex];
@@ -78,7 +79,7 @@ function partition(items, left, right) {
 
 
 
-
+return sortedArr;
 
 
 }
